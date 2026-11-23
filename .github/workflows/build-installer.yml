@@ -1,0 +1,42 @@
+name: Build Setup EXE (Inno thin)
+
+# Secondary installer (Inno). Primary offline installer is build-nsis.yml.
+# This does NOT embed full offline Python+tk+llama-cpp.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Inno Setup
+        shell: pwsh
+        run: |
+          choco install innosetup -y --no-progress
+          if (-not (Test-Path "C:\Program Files (x86)\Inno Setup 6\ISCC.exe")) {
+            throw "ISCC.exe not found"
+          }
+
+      - name: Compile installer
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          New-Item -ItemType Directory -Force -Path installer\Output | Out-Null
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "installer\GGUF-Runner.iss"
+          $out = Get-ChildItem installer\Output\*.exe -ErrorAction SilentlyContinue
+          if (-not $out) { throw "No EXE produced by Inno Setup" }
+          $out | ForEach-Object { Write-Host $_.FullName $_.Length }
+
+      - name: Upload Setup EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: GGUF-Runner-Setup-Inno
+          path: |
+            installer/Output/*.exe
+          if-no-files-found: error

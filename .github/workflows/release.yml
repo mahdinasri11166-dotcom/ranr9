@@ -1,0 +1,117 @@
+name: Build Release (portable + llama-server)
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download llama-server Windows x64 CPU
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          New-Item -ItemType Directory -Force -Path bin, bin\_tmp | Out-Null
+          $zip = "bin\_tmp\llama.zip"
+          $ok = $false
+          $candidates = @(
+            "https://github.com/ggml-org/llama.cpp/releases/download/b8581/llama-b8581-bin-win-cpu-x64.zip",
+            "https://github.com/ggerganov/llama.cpp/releases/download/b8581/llama-b8581-bin-win-cpu-x64.zip"
+          )
+          foreach ($url in $candidates) {
+            try {
+              Write-Host "Trying $url"
+              Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing
+              if ((Get-Item $zip).Length -ge 1MB) { $ok = $true; break }
+            } catch { Write-Host $_ }
+          }
+          if (-not $ok) {
+            $headers = @{ "User-Agent" = "GGUF-Runner-CI"; "Accept" = "application/vnd.github+json" }
+            $releases = Invoke-RestMethod -Uri "https://api.github.com/repos/ggml-org/llama.cpp/releases?per_page=12" -Headers $headers
+            $asset = $null
+            foreach ($rel in $releases) {
+              foreach ($a in $rel.assets) {
+                $n = $a.name.ToLowerInvariant()
+                if ($n -match "win" -and $n -match "x64" -and $n -match "cpu" -and $n -match "\.zip$" -and $n -notmatch "cuda") {
+                  $asset = $a; break
+                }
+              }
+              if ($asset) { break }
+            }
+            if (-not $asset) { throw "No llama.cpp win-x64 cpu zip" }
+            Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip -UseBasicParsing
+          }
+          if ((Get-Item $zip).Length -lt 1MB) { throw "llama zip corrupt/too small" }
+          Expand-Archive -Path $zip -DestinationPath "bin\_tmp\out" -Force
+          $exe = Get-ChildItem "bin\_tmp\out" -Recurse -Filter "llama-server.exe" | Select-Object -First 1
+          if (-not $exe) { $exe = Get-ChildItem "bin\_tmp\out" -Recurse -Filter "server.exe" | Select-Object -First 1 }
+          if (-not $exe) { throw "llama-server.exe missing in archive" }
+          Copy-Item -Force $exe.FullName "bin\llama-server.exe"
+          Get-ChildItem $exe.Directory.FullName -Filter "*.dll" -EA SilentlyContinue | Copy-Item -Force -Destination "bin\"
+          if ((Get-Item "bin\llama-server.exe").Length -lt 1MB) { throw "server exe too small" }
+          Remove-Item -Recurse -Force "bin\_tmp"
+          Write-Host "OK llama-server.exe"
+
+      - name: Pack portable zip (with server)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $ver = "${{ github.ref_name }}"
+          if ([string]::IsNullOrWhiteSpace($ver)) { $ver = "manual" }
+          $ver = ($ver -replace '[\\/:*?"<>|]', '-')
+          $name = "GGUF-Runner-portable-$ver-with-server.zip"
+          $stage = "_stage"
+          $out = "_out"
+          Remove-Item -Recurse -Force $stage, $out -EA SilentlyContinue
+          New-Item -ItemType Directory $stage, $out | Out-Null
+          Get-ChildItem -Force | Where-Object { $_.Name -notin @(".git", "_stage", "_out") } | ForEach-Object {
+            Copy-Item -Recurse -Force $_.FullName (Join-Path $stage $_.Name)
+          }
+          foreach ($d in @("models", "sessions", "workspace", "memory")) {
+            New-Item -ItemType Directory -Force -Path (Join-Path $stage $d) | Out-Null
+          }
+          $zipPath = Join-Path $out $name
+          Compress-Archive -Path (Join-Path $stage "*") -DestinationPath $zipPath -Force
+          $len = (Get-Item $zipPath).Length
+          if ($len -lt 50KB) { throw "zip too small $len" }
+          Write-Host "OK $zipPath size=$len"
+
+      - name: Checksums
+        shell: pwsh
+        run: |
+          $z = Get-ChildItem _out\GGUF-Runner-portable-*-with-server.zip | Select-Object -First 1
+          $h = (Get-FileHash $z.FullName -Algorithm SHA256).Hash
+          Set-Content _out\SHA256SUMS.txt "$h  $($z.Name)"
+          "size=$($z.Length) sha=$h" | Set-Content _out\BUILD_INFO.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: portable-with-server-${{ github.ref_name }}
+          path: |
+            _out/GGUF-Runner-portable-*-with-server.zip
+            _out/SHA256SUMS.txt
+            _out/BUILD_INFO.txt
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Publish release assets
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: _out/GGUF-Runner-portable-*-with-server.zip,_out/SHA256SUMS.txt,_out/BUILD_INFO.txt
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

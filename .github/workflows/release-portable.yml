@@ -1,0 +1,87 @@
+name: Build portable zip
+
+# Packs source tree into a downloadable portable zip (no offline Python bake).
+# Fix: do NOT Compress-Archive -Path * into the same folder (empty/missing artifact).
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-portable-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  zip:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create portable zip
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $ver = "${{ github.ref_name }}"
+          if ([string]::IsNullOrWhiteSpace($ver)) { $ver = "manual" }
+          # sanitize (branch names may contain /)
+          $ver = ($ver -replace '[\\/:*?"<>|]', '-')
+          $name = "GGUF-Runner-portable-$ver"
+          $stage = Join-Path $pwd "_portable_stage"
+          $outDir = Join-Path $pwd "_portable_out"
+          Remove-Item -Recurse -Force $stage, $outDir -ErrorAction SilentlyContinue
+          New-Item -ItemType Directory -Force -Path $stage, $outDir | Out-Null
+
+          $exclude = @(".git", "_portable_stage", "_portable_out", ".github")
+          Get-ChildItem -Force | Where-Object { $exclude -notcontains $_.Name } | ForEach-Object {
+            Copy-Item -Recurse -Force $_.FullName (Join-Path $stage $_.Name)
+          }
+
+          # ensure empty dirs exist in zip consumers
+          foreach ($d in @("models", "bin", "sessions", "workspace", "memory")) {
+            New-Item -ItemType Directory -Force -Path (Join-Path $stage $d) | Out-Null
+          }
+
+          $zipPath = Join-Path $outDir "$name.zip"
+          Compress-Archive -Path (Join-Path $stage "*") -DestinationPath $zipPath -Force
+
+          if (-not (Test-Path $zipPath)) { throw "zip not created: $zipPath" }
+          $len = (Get-Item $zipPath).Length
+          if ($len -lt 50KB) { throw "zip too small ($len) — pack failed" }
+          Write-Host "Created $zipPath size=$len"
+          # expose for next steps
+          echo "PORTABLE_ZIP=$zipPath" >> $env:GITHUB_ENV
+          echo "PORTABLE_NAME=$name.zip" >> $env:GITHUB_ENV
+
+      - name: Checksums
+        shell: pwsh
+        run: |
+          $z = Get-ChildItem _portable_out\GGUF-Runner-portable-*.zip | Select-Object -First 1
+          $h = (Get-FileHash $z.FullName -Algorithm SHA256).Hash
+          Set-Content _portable_out\SHA256SUMS.txt "$h  $($z.Name)"
+          "size=$($z.Length) sha=$h ref=${{ github.ref_name }}" | Set-Content _portable_out\BUILD_INFO.txt
+          Write-Host "zip=$($z.Name) sha=$h"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GGUF-Runner-portable-${{ github.ref_name }}
+          path: |
+            _portable_out/GGUF-Runner-portable-*.zip
+            _portable_out/SHA256SUMS.txt
+            _portable_out/BUILD_INFO.txt
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Attach to GitHub Release (tags only)
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: _portable_out/GGUF-Runner-portable-*.zip,_portable_out/SHA256SUMS.txt,_portable_out/BUILD_INFO.txt
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

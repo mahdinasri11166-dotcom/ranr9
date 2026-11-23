@@ -1,0 +1,27 @@
+name: GPU wheels note (manual)
+
+# Does not build full Setup. Documents / validates CUDA pip install recipe on windows.
+on:
+  workflow_dispatch:
+
+jobs:
+  note:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Print GPU install recipe
+        shell: pwsh
+        run: |
+          Write-Host "Offline NSIS remains CPU."
+          Write-Host "For GPU on user machine:"
+          Write-Host "  pip uninstall llama-cpp-python -y"
+          Write-Host "  `$env:CMAKE_ARGS='-DGGML_CUDA=on'"
+          Write-Host "  pip install llama-cpp-python --no-cache-dir"
+          Write-Host "See docs/GPU_BUILD.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: GPU-BUILD-README
+          path: docs/GPU_BUILD.md

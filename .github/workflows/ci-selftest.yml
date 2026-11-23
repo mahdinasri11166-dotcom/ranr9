@@ -1,0 +1,35 @@
+name: CI Selftest
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install light deps
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy requests pypdf Pillow
+      - name: AST check all modules
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for f in Path("scripts/python").glob("*.py"):
+              ast.parse(f.read_text(encoding="utf-8"))
+              print("OK", f.name)
+          PY
+      - name: Selftest
+        env:
+          PYTHONPATH: scripts/python
+        run: |
+          python scripts/python/selftest.py
+          python -c "import agent_tools; assert len(agent_tools.TOOLS)>=30"
