@@ -1,0 +1,17 @@
+{
+  "version": "4.9.2",
+  "name": "GGUF Runner",
+  "team": "تیم توسعه نو",
+  "authors": [
+    {
+      "name": "مهدی طریری",
+      "email": "mahditariri@gmail.com"
+    },
+    {
+      "name": "محسن طریفی",
+      "email": "Masean.us@gmail.com"
+    }
+  ],
+  "ui": "graphical-hub",
+  "notes": "Terminal shell polish, env/echo, OSINT search dossier, UTF-8 launch"
+}

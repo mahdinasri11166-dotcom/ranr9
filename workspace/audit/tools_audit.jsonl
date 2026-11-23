@@ -1,0 +1,123 @@
+{"ts": 1795275531.8539646, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275533.0827527, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275533.744979, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795275534.387401, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795275535.2010927, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795275536.1332347, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275536.8535433, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275538.3233883, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275552.9965668, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275553.6318922, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275554.2790608, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795275660.4683378, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275661.2239308, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275661.862094, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795275662.5416553, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795275663.315337, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795275663.9770854, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275665.0442486, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795275666.3394551, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281022.7907069, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281023.5413637, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281024.2213123, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795281024.884838, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795281025.710196, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795281026.4226756, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281027.5372565, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281028.8829963, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281161.7914195, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281162.5622206, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281163.244223, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795281163.9282563, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795281164.733793, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795281165.4315884, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281166.524301, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281167.9121315, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281274.3259234, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281275.065935, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281275.7340543, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795281276.3863764, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795281277.2973218, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795281277.8072438, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281278.6525345, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795281279.8589828, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289489.8280382, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289490.5627291, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289491.2307198, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795289491.876758, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795289492.6826015, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795289492.9695013, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289494.1711302, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289495.2003286, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289699.0556278, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289699.7804809, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289700.4390373, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "brute-force و حدس رمز عبور / credential stuffing در این محصول پیاده‌سازی و مجاز نیست."}
+{"ts": 1795289701.105369, "tool": "list_dir", "arguments": {"path": "../.."}, "ok": false, "approved": null, "error": "Path outside workspace blocked: ../.."}
+{"ts": 1795289701.9500515, "tool": "sys_run_cmd", "arguments": {"command": "echo test"}, "ok": false, "approved": null, "error": "حالت مدیر (elevated_mode) خاموش است. در profiles/approval_policy.json مقدار \"elevated_mode\": true بگذارید و دوباره تأیید هر دستور را در UI بپذیرید."}
+{"ts": 1795289702.59452, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289703.7093165, "tool": "todo_plan", "arguments": {"tasks": ["a", "b"]}, "ok": true, "approved": null, "error": null}
+{"ts": 1795289704.6920087, "tool": "search_code", "arguments": {"query": "def ", "path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335535.9870164, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335537.0690014, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335537.6991124, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795335538.368102, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335538.9747472, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335539.4416733, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335540.3605566, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335541.0001397, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335592.1105268, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335592.738977, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335593.365417, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795335593.9819894, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335594.6726344, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335595.3046405, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335596.2131429, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795335596.838802, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337334.7509353, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337335.4728343, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337336.147214, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795337336.8908622, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337337.5881667, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337338.2748344, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337339.2113593, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337339.9249852, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337402.5521314, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337403.1954634, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337403.82273, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795337404.4951253, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337405.1272218, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337405.7853537, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337406.7927706, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337407.1199334, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337408.0127347, "tool": "make_code_file", "arguments": {"language": "python", "code": "print(42)\n", "filename": "selftest_snippet.py"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337408.9918766, "tool": "make_document", "arguments": {"content": "hello selftest", "fmt": "docx", "filename": "selftest.docx"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337700.9268856, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337701.6829665, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337702.3279428, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795337703.0653334, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337703.7223825, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337704.3883324, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337705.3582582, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337705.9757087, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337707.0984187, "tool": "make_code_file", "arguments": {"language": "python", "code": "print(42)\n", "filename": "selftest_snippet.py"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795337708.13577, "tool": "make_document", "arguments": {"content": "hello selftest", "fmt": "docx", "filename": "selftest.docx"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372909.2732286, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372909.9849825, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372910.613833, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795372911.2675533, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372911.9861803, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372912.2957253, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372913.256938, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372913.527431, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372914.5999198, "tool": "make_code_file", "arguments": {"language": "python", "code": "print(42)\n", "filename": "selftest_snippet.py"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795372915.6374404, "tool": "make_document", "arguments": {"content": "hello selftest", "fmt": "docx", "filename": "selftest.docx"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422821.6232948, "tool": "session_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422822.3547456, "tool": "case_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422823.0289786, "tool": "bruteforce", "arguments": {}, "ok": false, "approved": null, "error": "ابزار bruteforce داخلی پیاده‌سازی نشده است. می‌توانید ابزار سفارشی خود را در workspace/user_tools/ اضافه کنید."}
+{"ts": 1795422823.679351, "tool": "list_dir", "arguments": {"path": "."}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422824.4687386, "tool": "build_list_templates", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422825.1505587, "tool": "proxy_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422825.7420182, "tool": "monitor_system", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422826.3301072, "tool": "model_meta_list", "arguments": {}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422827.2103386, "tool": "make_code_file", "arguments": {"language": "python", "code": "print(42)\n", "filename": "selftest_snippet.py"}, "ok": true, "approved": null, "error": null}
+{"ts": 1795422827.8922865, "tool": "make_document", "arguments": {"content": "hello selftest", "fmt": "docx", "filename": "selftest.docx"}, "ok": true, "approved": null, "error": null}

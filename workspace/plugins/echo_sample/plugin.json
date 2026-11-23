@@ -1,0 +1,8 @@
+{
+  "name": "Echo Sample",
+  "version": "1.0",
+  "risk": "low",
+  "read_only": true,
+  "entry": "run.py",
+  "description": "نمونه پلاگین؛ ورودی را برمی‌گرداند"
+}

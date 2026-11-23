@@ -1,0 +1,20 @@
+# Core (Desktop Chat + Agent)
+customtkinter>=5.2.0
+llama-cpp-python>=0.2.0
+requests>=2.28.0
+
+# Optional helpers (already used by services)
+pypdf>=3.0.0
+Pillow>=9.0.0
+numpy>=1.23.0
+
+# Cloud gateway (optional)
+fastapi>=0.100.0
+uvicorn>=0.22.0
+pydantic>=2.0.0
+
+# Monitoring
+psutil>=5.9.0
+
+# Offline translation
+argostranslate>=1.9.0

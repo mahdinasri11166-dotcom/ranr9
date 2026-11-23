@@ -1,0 +1,10 @@
+{
+  "comment": "Map substring of gguf filename to profile name",
+  "rules": [
+    {"match": "coder", "profile": "coder"},
+    {"match": "code", "profile": "coder"},
+    {"match": "trade", "profile": "trader"},
+    {"match": "raven", "profile": "trader"}
+  ],
+  "default_profile": "default"
+}

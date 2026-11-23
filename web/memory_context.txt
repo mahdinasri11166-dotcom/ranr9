@@ -1,0 +1,2 @@
+===== MEMORY CONTEXT =====
+Run scripts/build_memory.bat after adding books/memory txt files

@@ -1,0 +1,6 @@
+GGUF Runner — راهنمای نصب سریع
+1) Setup را اجرا کنید (مسیر پیش‌فرض %LOCALAPPDATA%\GGUF-Runner)
+2) CHAT.bat یا میانبر دسکتاپ
+3) مدل .gguf را در پوشه models بگذارید
+4) ترجمه آفلاین روی Win10/11 با Python توکار 3.11 (بسته‌های Argos در profiles\argos_packages)
+5) Win7 از python38 استفاده می‌کند؛ ترجمه آفلاین Argos روی 3.8 پشتیبانی نمی‌شود

@@ -1,0 +1,56 @@
+# Local-cloud stack: gateway + optional llama.cpp server + monitoring
+# Developer: Mehdi Tariri <mahditariri@gmail.com>
+services:
+  gateway:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GGUF_API_KEYS: "dev-key-change-me"
+      GGUF_RATE_PER_MIN: "60"
+      LLAMA_SERVER_URL: "http://llama:8080"
+      VLLM_URL: ""
+    volumes:
+      - ./models:/app/models:ro
+      - ./profiles:/app/profiles
+      - ./workspace:/app/workspace
+    depends_on:
+      - llama
+
+  # Official llama.cpp server image may vary; replace with your binary host as needed
+  llama:
+    image: ghcr.io/ggerganov/llama.cpp:server
+    command: ["-m", "/models/model.gguf", "--host", "0.0.0.0", "--port", "8080"]
+    volumes:
+      - ./models:/models:ro
+    ports:
+      - "8080:8080"
+    profiles: ["with-llama-image"]
+
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    volumes:
+      - ./cloud/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+    profiles: ["monitoring"]
+
+  grafana:
+    image: grafana/grafana:10.4.0
+    ports:
+      - "3000:3000"
+    profiles: ["monitoring"]
+
+  # DCGM exporter needs NVIDIA GPU node — enable on GPU servers only
+  dcgm-exporter:
+    image: nvcr.io/nvidia/k8s/dcgm-exporter:3.3.5-3.4.0-ubuntu22.04
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    ports:
+      - "9400:9400"
+    profiles: ["gpu-monitoring"]
