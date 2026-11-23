@@ -1,0 +1,10 @@
+{
+  "default": "ALLOW",
+  "tools": {},
+  "blocked_tools": [],
+  "require_approval_for_all": false,
+  "elevated_mode": true,
+  "unrestricted_tools": true,
+  "browser_allow_suffixes": [],
+  "notes": "4.7.0 unrestricted defaults for power-user agent"
+}

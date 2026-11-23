@@ -1,0 +1,73 @@
+{"ts": "2026-11-18T17:17:39", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:17:40", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:17:40", "tool": "list_dir", "policy": "ALLOW", "approved": true, "args_summary": "{\"path\": \".\"}"}
+{"ts": "2026-11-18T17:17:44", "tool": "list_code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:17:44", "tool": "list_plugins", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:17:44", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T17:17:47", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:17:47", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:17:47", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:25:40", "tool": "list_code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:25:41", "tool": "list_plugins", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:25:41", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T17:25:43", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:25:43", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:25:43", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:27:49", "tool": "shell_exec", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo hi\"}"}
+{"ts": "2026-11-18T17:27:49", "tool": "shell_exec", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"command\": \"echo hi\"}"}
+{"ts": "2026-11-18T17:27:51", "tool": "list_code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:27:52", "tool": "list_plugins", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:27:52", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T17:27:54", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:27:54", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:27:55", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:27:55", "tool": "shell_exec", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T17:30:09", "tool": "code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:30:09", "tool": "plugin_list", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:30:10", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T17:30:12", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:30:12", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:30:12", "tool": "code_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:30:12", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T17:38:26", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"hi\"}}"}
+{"ts": "2026-11-18T17:38:26", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"hi\"}}"}
+{"ts": "2026-11-18T17:38:29", "tool": "code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:38:29", "tool": "plugin_list", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T17:38:29", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T17:38:31", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:38:32", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T17:38:32", "tool": "code_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T17:38:32", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T17:38:32", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:26:21", "tool": "code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:26:21", "tool": "plugin_list", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:26:21", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T19:26:23", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:26:23", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:26:24", "tool": "code_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T19:26:24", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T19:26:24", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:26:25", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo test\"}"}
+{"ts": "2026-11-18T19:26:25", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"command\": \"echo test\"}"}
+{"ts": "2026-11-18T19:26:25", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:26:59", "tool": "code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:26:59", "tool": "plugin_list", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:26:59", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T19:27:01", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:27:01", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:27:01", "tool": "code_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T19:27:02", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T19:27:02", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:27:02", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo test\"}"}
+{"ts": "2026-11-18T19:27:03", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"command\": \"echo test\"}"}
+{"ts": "2026-11-18T19:27:03", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:27:03", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}
+{"ts": "2026-11-18T19:27:03", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo 1\"}"}
+{"ts": "2026-11-18T19:29:24", "tool": "code_formats", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:29:24", "tool": "plugin_list", "policy": "ALLOW", "approved": true, "args_summary": "{}"}
+{"ts": "2026-11-18T19:29:24", "tool": "no_such_tool_xyz", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{}"}
+{"ts": "2026-11-18T19:29:26", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:29:26", "tool": "run_python", "policy": "REQUIRE_APPROVAL", "approved": true, "args_summary": "{\"code\": \"1\"}"}
+{"ts": "2026-11-18T19:29:27", "tool": "code_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"code\": \"print(1)\"}"}
+{"ts": "2026-11-18T19:29:27", "tool": "shell_run", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"command\": \"echo x\"}"}
+{"ts": "2026-11-18T19:29:27", "tool": "piko_act", "policy": "REQUIRE_APPROVAL", "approved": false, "args_summary": "{\"action\": \"notify\", \"args\": {\"message\": \"x\"}}"}

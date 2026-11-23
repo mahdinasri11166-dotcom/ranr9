@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "note_fa": "enabled=true و tool_model=نام فایل در models (مدل کوچک). chat همان مدل لودشده در Hub است.",
+  "tool_model": "",
+  "chat_model": "",
+  "max_tool_tokens": 512,
+  "max_chat_tokens": 2048
+}

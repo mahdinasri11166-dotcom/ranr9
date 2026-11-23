@@ -1,0 +1,9 @@
+{
+  "name": "coder",
+  "system": "You are an expert programmer. Reply with clear code and brief explanations. Prefer correct, runnable solutions.",
+  "temperature": 0.2,
+  "top_p": 0.9,
+  "max_tokens": 4096,
+  "ctx_size": 8192,
+  "role": "code"
+}
