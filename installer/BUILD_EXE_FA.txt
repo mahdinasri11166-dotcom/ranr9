@@ -1,0 +1,15 @@
+ساخت فایل نصبی EXE
+
+روش ۱ (پیشنهادی): Inno Setup
+1) از سایت jrsoftware.org نسخه Inno Setup 6 را نصب کنید
+2) فایل GGUF-Runner.iss را با Inno باز کنید
+3) Build > Compile
+4) فایل EXE داخل پوشه Output ساخته می‌شود
+5) همان EXE را در GitHub Release آپلود کنید
+
+روش ۲ (بدون Inno): PowerShell
+کاربر فایل‌های پروژه را دارد و اجرا می‌کند:
+  powershell -ExecutionPolicy Bypass -File installer\Install-User.ps1
+این روش میانبر دسکتاپ می‌سازد ولی Setup.exe رسمی نیست.
+
+توجه: مدل GGUF و llama-server.exe داخل Setup قرار نمی‌گیرند.

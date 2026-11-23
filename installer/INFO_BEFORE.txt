@@ -1,0 +1,10 @@
+GGUF Runner Setup
+Developer: Mehdi Tariri (mahditariri@gmail.com)
+
+This installer will:
+- Copy the app (no admin required by default)
+- Create Start Menu / Desktop icon
+- Optionally detect Windows 7/8/10/11 and 32/64-bit
+- Download matching llama-server.exe (64-bit) from GitHub
+
+You still add .gguf models into the models folder after install.

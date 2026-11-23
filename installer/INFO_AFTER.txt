@@ -1,0 +1,8 @@
+Installation complete.
+
+1) Desktop / Start Menu: "GGUF Runner"
+2) Put .gguf models in:  models\
+3) Double-click the icon
+
+If the server is missing, run SETUP.bat once (needs internet).
+PDF/RAG features need Python 3.10+ then SETUP.bat again.
